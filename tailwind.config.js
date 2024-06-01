@@ -18,6 +18,7 @@ export default {
       colors: {
         "primary": {
           "green": "#00afaa",
+          "cerise": "#d70073",
         },
         "neutral": {
           "black": {
