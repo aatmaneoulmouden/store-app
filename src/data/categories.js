@@ -1,0 +1,1 @@
+export default ["Sport", "Tech", "Beauty", "Clothes"];

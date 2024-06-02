@@ -1,6 +1,6 @@
-const Header = () => {
-  const categories = ["Sport", "Tech", "Beauty", "Clothes"];
+import categories from "../data/categories";
 
+const Header = () => {
   const displayCategories = categories.map((category, index) => (
     <li key={index}>
       <a href="" className="capitalize">{category}</a>
