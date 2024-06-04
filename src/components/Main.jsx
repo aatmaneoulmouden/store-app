@@ -8,7 +8,7 @@ const Main = () => {
     <Category key={index} name={category} />
   ));
 
-  const flashProducts = products.filter(product => product.isFlash);
+  const flashProducts = products.filter((product) => product.isFlash);
 
   return (
     <main className="py-6">
