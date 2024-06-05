@@ -19,7 +19,7 @@ const Category = (props) => {
       <div className="cartegory-header bg-primary-green p-4">
         <h2 className="text-neutral-white text-lg font-semibold">{name}</h2>
       </div>
-      <div className="category-content grid grid-cols-4 gap-3 p-4 border border-gray-300 rounded-b-xl border-t-0">
+      <div className="category-content grid grid-cols-2 gap-3 p-4 border border-gray-300 rounded-b-xl border-t-0 lg:grid-cols-4">
         {displayProducts}
       </div>
     </section>
