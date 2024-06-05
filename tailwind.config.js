@@ -9,7 +9,7 @@ export default {
       center: true,
       padding: {
         DEFAULT: "1rem",
-        "lg": "3rem",
+        "lg": "6rem",
       }
     },
     fontFamily: {

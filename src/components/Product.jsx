@@ -35,7 +35,7 @@ const Product = (props) => {
 
   // Display discount value if the product has discount
   const displayDiscountValue = productHasDiscount && (
-    <span className="discount bg-primary-cerise rounded-md text-neutral-white py-1 px-3 text-sm mb-[6px]">
+    <span className="discount bg-primary-cerise rounded-md text-neutral-white py-1 px-3 text-[12px] font-semibold mb-[6px]">
       -{discountValue}%
     </span>
   );
@@ -58,10 +58,10 @@ const Product = (props) => {
         <img src="./simple-product.png" alt="" className="mx-auto" />
       </div>
       <div className="details-wrapper p-3">
-        <h2 className="font-semibold text-lg text-neutral-black-dark">
+        <h2 className="font-semibold text-neutral-black-dark uppercase">
           {title}
         </h2>
-        <small className="text-base block my-2">
+        <small className="text-sm block mb-2">
           Sold by{" "}
           <span className="font-semibold text-primary-green">{seller}</span>
         </small>
