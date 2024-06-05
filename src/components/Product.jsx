@@ -3,6 +3,8 @@ const Product = (props) => {
   const seller = props.product.seller;
   const productHasDiscount = props.product.discount.hasDiscount;
   const discountValue = props.product.discount.discountValue;
+  const productIsNew = props.product.isNew;
+  const productIsFlash = props.product.isFlash;
 
   // Current price
   const currentPriceInt = props.product.price;
@@ -15,7 +17,10 @@ const Product = (props) => {
 
   // Update current price if product has discount
   if (productHasDiscount) {
-    const newPrice = (currentPriceInt - currentPriceInt * (discountValue / 100)).toFixed(2);
+    const newPrice = (
+      currentPriceInt -
+      currentPriceInt * (discountValue / 100)
+    ).toFixed(2);
     const newPriceParts = newPrice.split(".");
     currentPrice.whole = newPriceParts[0];
     currentPrice.fractional = newPriceParts[1];
@@ -37,7 +42,19 @@ const Product = (props) => {
 
   return (
     <article className="border border-gray-300 rounded-xl overflow-hidden">
-      <div className="image-wrapper bg-gray-100">
+      <div className="image-wrapper bg-gray-100 relative">
+        <div className="badges-wrapper absolute top-2 left-3 flex gap-2">
+          {productIsFlash && (
+            <span className="bg-primary-cerise rounded-md text-neutral-white py-1 px-3 text-[12px] font-semibold mb-[6px]">
+              Flash
+            </span>
+          )}
+          {productIsNew && (
+            <span className="bg-primary-green rounded-md text-neutral-white py-1 px-3 text-[12px] font-semibold mb-[6px]">
+              New
+            </span>
+          )}
+        </div>
         <img src="./simple-product.png" alt="" className="mx-auto" />
       </div>
       <div className="details-wrapper p-3">
