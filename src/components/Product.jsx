@@ -5,6 +5,7 @@ const Product = (props) => {
   const discountValue = props.product.discount.discountValue;
   const productIsNew = props.product.isNew;
   const productIsFlash = props.product.isFlash;
+  const imageName = title.replace(" ", "-");
 
   // Current price
   const currentPriceInt = props.product.price;
@@ -55,7 +56,7 @@ const Product = (props) => {
             </span>
           )}
         </div>
-        <img src="./simple-product.png" alt="" className="mx-auto" />
+        <img src={`./${imageName}.png`} alt="" className="mx-auto" />
       </div>
       <div className="details-wrapper p-3">
         <h2 className="font-semibold text-neutral-black-dark uppercase">
